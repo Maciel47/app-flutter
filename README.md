@@ -12,7 +12,7 @@ Primeiro projeto em Flutter criado através do artigo:  [Seu primeiro app do Flu
 <div id='projectvid'/>
   
 ### Vídeo do projeto: 
-https://github.com/Maciel47/screens_flutter/assets/66790565/f5af7afd-8379-44b2-80d3-e3c08ea99d47
+https://github.com/Maciel47/app-flutter/assets/66790565/38b73951-ffef-4559-98e9-acff0578b95f
 
 <div id='runapp'/>
   
