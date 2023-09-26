@@ -88,7 +88,7 @@ class MyApp extends StatelessWidget {
     return ChangeNotifierProvider(
       create: (context) => MyAppState(),
       child: MaterialApp(
-        title: 'Namer App',
+        title: 'Primeiro App com Flutter',
         theme: ThemeData(
           useMaterial3: true,
           colorScheme:
@@ -140,7 +140,7 @@ class _MyHomePageState extends State<MyHomePage> {
         page = FavoritePage();
         break;
       default:
-      throw UnimplementedError('no widget for $selectedIndex');
+      throw UnimplementedError('Não há nenhuma implementação para $selectedIndex');
     }
 
     return LayoutBuilder(
@@ -154,11 +154,11 @@ class _MyHomePageState extends State<MyHomePage> {
                   destinations: [
                     NavigationRailDestination(
                       icon: Icon(Icons.home),
-                      label: Text('Home'),
+                      label: Text('Início'),
                     ),
                     NavigationRailDestination(
                       icon: Icon(Icons.favorite),
-                      label: Text('Favorites'),
+                      label: Text('Curtidas'),
                     ),
                   ],
                   selectedIndex: selectedIndex,
@@ -210,14 +210,14 @@ class GeneratorPage extends StatelessWidget {
                   appState.toggleFavorite();
                 },
                 icon: Icon(icon),
-                label: Text('Like'),
+                label: Text('Curti'),
               ),
                 SizedBox(width: 10),
               ElevatedButton(
                 onPressed: () {
                   appState.getNext();
                 },
-                child: Text('Next'),
+                child: Text('Próxima palavra'),
               ),
             ],
           ),
@@ -234,7 +234,7 @@ class FavoritePage extends StatelessWidget {
 
     if (appState.favorites.isEmpty) {
       return Center(
-        child: Text('No favorites yet.'),
+        child: Text('Você não curtiu nenhuma palavra por enquanto.'),
       );
     }
 
@@ -243,7 +243,7 @@ class FavoritePage extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.all(20),
-            child: Text('You have ''${appState.favorites.length} favorites: '),
+            child: Text('Você curtiu ''${appState.favorites.length} palavras. '),
           ),
           for (var pair in appState.favorites)
             ListTile(
